@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-mobile.css" />
+    <title>VENIA</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="menu-icon-mobile">
+        <img src="./images/menu-icon-mobile.png" alt="Menu Icon for Mobile" />
+      </div>
+      <h1 class="venia-logo">
+        <img src="./images/venia-logo.png" alt="VENIA Logo" />
+      </h1>
+      <nav>
+        <div class="nav-list">
+          <div class="nav-link">Home</div>
+          <div class="nav-link">Women</div>
+          <div class="nav-link">Men</div>
+          <div class="nav-link">Smart Gear</div>
+          <div class="nav-link">Accessories</div>
+        </div>
+      </nav>
+      <div class="cart-icon">
+        <img src="./images/cart-icon.png" alt="Cart" />
+      </div>
+    </header>
+    <div class="category">
+      <div class="category-title">Men's<br />Outerwear</div>
+      <div class="category-image">
+        <img src="./images/category-img.png" alt="Category Logo" />
+      </div>
+    </div>
+    <div class="filters-sort-mobile">
+      <div class="breadcrumbs-mobile">Clothing / Women’s / Outerwear</div>
+      <div class="filter-for-mobile"><a href="#">Filter Results</a></div>
+      <div class="sort-by-mobile"><a href="#">Sort Products</a></div>
+      <div class="resultscount-mobile">38 Results</div>
+    </div>
+    <div class="breadcrumbs-resultscount-sortby">
+      <div class="breadcrumbs">Clothing / Women’s / Outerwear</div>
+      <div class="resultscount"><span class="result-count"></span> Results</div>
+      <div class="sort-by">
+        <select id="sort-by-select" onchange="sortProducts(this)">
+          <option value="sort-by-price-low-to-high">
+            Sort by Price - Low to High
+          </option>
+          <option value="sort-by-price-high-to-low">
+            Sort by Price - High to Low
+          </option>
+        </select>
+      </div>
+    </div>
+    <main class="main-container">
+      <div class="filters-container">
+        <div class="filters-title">Filters</div>
+        <hr />
+        <div class="categories-title">Categories</div>
+        <hr />
+        <div class="filter-options">
+          <div class="filter-option">
+            <input
+              type="checkbox"
+              id="option-jewellery"
+              name="option-jewellery"
+              value="option-jewellery"
+              onclick="filterByOption()"
+            /><label for="option-jewellery">Jewellery</label><br />
+          </div>
+          <div class="filter-option">
+            <input
+              type="checkbox"
+              id="option-electronics"
+              name="option-electronics"
+              value="option-electronics"
+              onclick="filterByOption()"
+            /><label for="option-electronics">Electronics</label><br />
+          </div>
+          <div class="filter-option">
+            <input
+              type="checkbox"
+              id="option-mensclothing"
+              name="option-mensclothing"
+              value="option-mensclothing"
+              onclick="filterByOption()"
+            /><label for="option-mensclothing">Men's Clothing</label><br />
+          </div>
+          <div class="filter-option">
+            <input
+              type="checkbox"
+              id="option-womensclothing"
+              name="option-womensclothing"
+              value="option-womensclothing"
+              onclick="filterByOption()"
+            /><label for="option-womensclothing">Women's Clothing</label><br />
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="products-container"></div>
+    </main>
+    <script src="script.js" />
+  </body>
+</html>

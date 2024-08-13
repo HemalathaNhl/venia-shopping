@@ -1,0 +1,112 @@
+/* Media queries
+----------------------------------------
+Mobile - 375px
+-------------- */
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  .top-bar {
+    width: 375px;
+    max-width: 375px;
+    height: 48px;
+    padding: 15px 15px 15px 15px;
+  }
+  .menu-icon-mobile {
+    display: block;
+    padding-left: 30px;
+    padding-right: 83px;
+  }
+  .menu-icon-mobile img {
+    width: 48px;
+    height: 48px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .venia-logo img {
+    width: 78px;
+    height: 18px;
+  }
+  .cart-icon {
+    margin-left: 83px;
+  }
+  .category {
+    flex-direction: column;
+    width: 375px;
+    height: 284px;
+  }
+  .category-title {
+    order: 2;
+    width: 343px;
+    height: 159px;
+    margin-top: -68px;
+    margin-left: 16px;
+    padding: 24px 83px 32px 84px;
+    font-size: 36px;
+  }
+  .category-image {
+    order: 1;
+  }
+  .category-image img {
+    width: 375px;
+    height: 193px;
+    margin: 0;
+  }
+  .breadcrumbs-resultscount-sortby,
+  .filters-container {
+    display: none;
+  }
+  .filters-sort-mobile {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .breadcrumbs-mobile {
+    width: 339px;
+    height: 20px;
+    margin: 24px 20px 32px 16px;
+  }
+  .filter-for-mobile {
+    width: 97px;
+    height: 20px;
+    margin-left: 51px;
+    margin-right: 58px;
+  }
+  .sort-by-mobile {
+    width: 103px;
+    height: 20px;
+    margin-right: 42px;
+  }
+  .resultscount-mobile {
+    width: 343px;
+    padding-left: 34px;
+    margin: 32px 16px 32px 16px;
+    text-align: center;
+  }
+  .main-container {
+    width: 375px;
+    padding: 0 0 66px 0;
+  }
+  .products-container {
+    width: 375px;
+    padding: 0 11px 0 16px;
+  }
+  .products-builder {
+    width: 375px;
+    gap: 21px;
+    flex-wrap: wrap;
+  }
+  .product {
+    width: 164px;
+    height: 308px;
+    margin-top: 16px;
+  }
+  .product-image img {
+    width: 164px;
+    height: 196px;
+  }
+  .product-title {
+    padding-top: 8px;
+    font-size: 16px;
+  }
+  .product-price {
+    padding-top: 6px;
+  }
+}

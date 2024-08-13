@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: muli;
+}
+html {
+  font-size: 16px;
+}
+/* Header style
+-------------------------------------------------- */
+.top-bar {
+  width: 1920px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #1363df;
+  padding: 30px 286px 30px 287px;
+}
+.menu-icon-mobile,
+.filters-sort-mobile {
+  display: none;
+}
+.venia-logo img {
+  width: 78px;
+  height: 18px;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  width: 1356px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-left: 391px;
+  padding-right: 409px;
+}
+.nav-link {
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+  color: white;
+}
+.cart-icon img {
+  width: 22px;
+  height: 24px;
+}
+/* Category header style
+---------------------------------------------------- */
+.category {
+  width: 1920px;
+  height: 352px;
+  background-color: white;
+  display: flex;
+}
+.category-title {
+  position: relative;
+  width: 555px;
+  background-color: #1b252c;
+  margin-left: 8px;
+  font-family: Source Serif Pro;
+  font-size: 48px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  padding: 96px 91px 103px 90px;
+}
+.category-image img {
+  width: 1365px;
+  height: 320px;
+  margin: 16px 0;
+}
+/* Breadcrumbs syle
+-------------------------------------------------------- */
+.breadcrumbs-resultscount-sortby {
+  display: flex;
+  width: 1920px;
+  padding: 0 273px 0 275px;
+  margin: 32px 0 24px;
+  height: 44px;
+}
+.breadcrumbs {
+  width: 317px;
+  height: 44px;
+}
+.resultscount {
+  width: 254px;
+  padding-left: 34px;
+}
+.sort-by {
+  width: 801px;
+  padding-left: 547px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #172026;
+  border-radius: 8px;
+}
+.sort-by select {
+  width: 254px;
+  height: 44px;
+  padding: 12px;
+}
+.main-container {
+  display: flex;
+  width: 1920px;
+  padding: 0 272px 0 275px;
+}
+/* Products style
+---------------------------------------------- */
+.products-container {
+  width: 1081px;
+  padding: 0 12px 0 53px;
+}
+.products-builder {
+  display: flex;
+  width: 1021px;
+  flex-direction: row;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 319px;
+  height: 486px;
+  margin-top: 21px;
+}
+.product-image img {
+  width: 319px;
+  height: 382px;
+}
+.product-title {
+  padding-top: 11px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.product-price {
+  padding-top: 2px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.product-rating {
+  padding-top: 18px;
+}
+.product-rating img {
+  width: 24px;
+  height: 20px;
+}
+/* Filters style
+------------------------------------------------ */
+.filters-container {
+  width: 305px;
+}
+.filters-title {
+  padding-bottom: 16px;
+}
+.categories-title {
+  padding-top: 15px;
+  padding-bottom: 16px;
+}
+.filter-option {
+  margin-top: 16px;
+}
+.filter-options {
+  padding-bottom: 16px;
+}
+.filter-options label {
+  padding-left: 8px;
+}
