@@ -1,38 +1,68 @@
 let products = [];
 let filteredProducts = [];
-const parser = new DOMParser();
+// Url for fetching products
 const url = "https://fakestoreapi.com/products";
+
+const fetchProducts = async () => {
+  let data = [];
+  let errorMsg = "";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      errorMsg = response.status;
+      throw new Error(`Response status: ${response.status}`);
+    }
+    data = await response.json();
+  } catch (error) {
+    errorMsg = error.message;
+    console.error(error.message);
+  }
+  // Error msg if any
+  document.querySelector(".error-msg").innerHTML = errorMsg;
+
+  products = [...data];
+  filteredProducts = [...products];
+
+  displayProducts(products);
+};
+// Fetching products data from API
+const loadData = (e) => {
+  fetchProducts();
+};
+window.addEventListener("load", loadData);
+
+// Building products markup after fetching data from API
 const buildProducts = (data) => {
   return `<div class="products-builder">
     ${data.map((val) => buildProductMarkup(val))}
     </div>`;
 };
+// Building individual product markup
 const buildProductMarkup = (val) => {
-  return `<div class="product"><div class="product-image"><img src=${val.image}  alt=${val.description}></div><div class="product-title">${val.title}</div><div class="product-price">$${val.price}</div><div class="product-rating"><img src="./images/product-rating-img.png"  alt="Rate the product"></div></div>`;
+  return `<div class="product">
+    <div class="product-image"><img src=${val.image}  alt=${val.description}></div>
+    <div class="product-title">${val.title}</div>
+    <div class="product-price">$${val.price}</div>
+    <div class="product-rating"><img src="./images/product-rating-img.png"  alt="Rate the product"></div>
+  </div>`;
 };
-const loadData = (e) => {
-  fetchProducts();
-};
-const fetchProducts = async () => {
-  const response = await fetch(url);
-  const data = await response.json();
-  products = [...data];
-  filteredProducts = [...products];
-  displayProducts(products);
-};
+// Displaying products from products data array
 displayProducts = (data) => {
   const dataArray = [...data];
   const markupStr = buildProducts(dataArray).split(",").join(" ");
   document.querySelector(".products-container").innerHTML = markupStr;
   document.querySelector(".result-count").innerHTML = dataArray.length;
 };
-window.addEventListener("load", loadData);
+
+// Filtering products by categories
 const filterByOption = () => {
   const dataArr = [...products];
   let optionJewelleryArr = [];
   let optionElectronicsArr = [];
   let optionMensClothingArr = [];
   let optionWomensClothingArr = [];
+  // console.log("filterByOption");
   if (document.querySelector("#option-jewellery").checked) {
     optionJewelleryArr = dataArr.filter((val) => val.category === "jewelery");
   } else {
@@ -68,9 +98,9 @@ const filterByOption = () => {
   filteredProducts = [...filteredArr];
   sortProducts(document.querySelector("#sort-by-select"));
 };
-const sortProducts = (sortOption) => {
-  console.log(sortOption.value);
 
+// Sorting products by price
+const sortProducts = (sortOption) => {
   let sortedProducts = [...filteredProducts];
   if (sortOption.value === "sort-by-price-low-to-high") {
     sortedProducts.sort((a, b) => {
@@ -85,6 +115,5 @@ const sortProducts = (sortOption) => {
       return bp - ap;
     });
   }
-  console.log(sortedProducts);
   displayProducts(sortedProducts);
 };
