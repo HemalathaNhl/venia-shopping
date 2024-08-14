@@ -117,7 +117,7 @@ html {
 /* Loader style
 ------------------------------------------------ */
 .loading-container {
-  font-size: 58px;
+  font-size: 30px;
   text-align: center;
   width: 1920px;
   padding-left: 500px;
@@ -189,6 +189,9 @@ html {
 ------------------------------------------------ */
 .error-msg {
   color: red;
-  font-size: 48px;
+  font-size: 30px;
+  width: 1920px;
   text-align: center;
+  margin-top: -230px;
+  margin-bottom: 30px;
 }

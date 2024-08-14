@@ -11,7 +11,6 @@ Mobile - 375px
   }
   .menu-icon-mobile {
     display: block;
-    /* padding-right: 88px; */
   }
   .menu-icon-mobile img {
     width: 18px;
@@ -116,7 +115,7 @@ Mobile - 375px
     padding: 0 0 66px 0;
   }
   .loading-container {
-    font-size: 58px;
+    font-size: 30px;
     text-align: center;
     width: 375px;
     margin: 20px 0 0 0;
@@ -145,5 +144,13 @@ Mobile - 375px
   }
   .product-price {
     padding-top: 6px;
+  }
+  .error-msg {
+    color: red;
+    font-size: 30px;
+    width: 375px;
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 30px;
   }
 }
