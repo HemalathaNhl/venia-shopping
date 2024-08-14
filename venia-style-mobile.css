@@ -5,28 +5,29 @@ Mobile - 375px
 @media only screen and (min-width: 320px) and (max-width: 375px) {
   .top-bar {
     width: 375px;
-    max-width: 375px;
     height: 48px;
-    padding: 15px 15px 15px 15px;
+    padding: 0 16px 0 30px;
+    justify-content: space-between;
   }
   .menu-icon-mobile {
     display: block;
-    padding-left: 30px;
-    padding-right: 83px;
+    /* padding-right: 88px; */
   }
   .menu-icon-mobile img {
-    width: 48px;
-    height: 48px;
+    width: 18px;
+    height: 12px;
   }
   .nav-list {
+    width: 375px;
     display: none;
   }
   .venia-logo img {
     width: 78px;
     height: 18px;
   }
-  .cart-icon {
-    margin-left: 83px;
+  .cart-icon img {
+    width: 22px;
+    height: 24px;
   }
   .category {
     flex-direction: column;
@@ -42,12 +43,26 @@ Mobile - 375px
     padding: 24px 83px 32px 84px;
     font-size: 36px;
   }
+  .category-title::after {
+    content: "";
+    display: block;
+    width: 102px;
+    height: 8px;
+    background-color: #1363df;
+    margin-top: 12px;
+    margin-left: 37px;
+  }
   .category-image {
     order: 1;
   }
   .category-image img {
     width: 375px;
     height: 193px;
+    margin: 0;
+  }
+  .breadcrumbs-resultscount-sortby {
+    width: 375px;
+    padding: 0;
     margin: 0;
   }
   .breadcrumbs-resultscount-sortby,
@@ -57,21 +72,37 @@ Mobile - 375px
   .filters-sort-mobile {
     display: flex;
     flex-wrap: wrap;
+    width: 375px;
   }
   .breadcrumbs-mobile {
     width: 339px;
     height: 20px;
     margin: 24px 20px 32px 16px;
   }
-  .filter-for-mobile {
-    width: 97px;
+  .filter-for-mobile,
+  .sort-by-mobile {
+    color: #181c24;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    display: flex;
     height: 20px;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .filter-for-mobile img,
+  .sort-by-mobile img {
+    width: 16px;
+    height: 16px;
+  }
+  .filter-for-mobile {
+    width: 121px;
     margin-left: 51px;
-    margin-right: 58px;
+    margin-right: 32px;
   }
   .sort-by-mobile {
-    width: 103px;
-    height: 20px;
+    width: 129px;
     margin-right: 42px;
   }
   .resultscount-mobile {
@@ -83,6 +114,12 @@ Mobile - 375px
   .main-container {
     width: 375px;
     padding: 0 0 66px 0;
+  }
+  .loading-container {
+    font-size: 58px;
+    text-align: center;
+    width: 375px;
+    margin: 20px 0 0 0;
   }
   .products-container {
     width: 375px;

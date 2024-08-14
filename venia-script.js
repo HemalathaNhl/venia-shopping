@@ -8,6 +8,7 @@ const fetchProducts = async () => {
   let errorMsg = "";
 
   try {
+    document.querySelector(".loading-container").style.display = "block";
     const response = await fetch(url);
     if (!response.ok) {
       errorMsg = response.status;
@@ -23,7 +24,7 @@ const fetchProducts = async () => {
 
   products = [...data];
   filteredProducts = [...products];
-
+  document.querySelector(".loading-container").style.display = "none";
   displayProducts(products);
 };
 // Fetching products data from API
@@ -62,7 +63,7 @@ const filterByOption = () => {
   let optionElectronicsArr = [];
   let optionMensClothingArr = [];
   let optionWomensClothingArr = [];
-  // console.log("filterByOption");
+
   if (document.querySelector("#option-jewellery").checked) {
     optionJewelleryArr = dataArr.filter((val) => val.category === "jewelery");
   } else {
